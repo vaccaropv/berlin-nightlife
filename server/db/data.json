@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "phone": "1234567890",
+      "username": "Tester",
+      "created_at": "2025-11-22T16:25:11.541Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "venue_id": "berghain",
+      "user_id": 1,
+      "queue_length": "Short",
+      "door_policy": "Relaxed",
+      "vibe": "Great",
+      "timestamp": "2025-11-22T16:25:28.154Z"
+    },
+    {
+      "id": 2,
+      "venue_id": "berghain",
+      "user_id": 1,
+      "queue_length": "Short",
+      "door_policy": "Relaxed",
+      "vibe": "",
+      "timestamp": "2025-11-22T16:28:41.067Z"
+    },
+    {
+      "id": 3,
+      "venue_id": "berghain",
+      "user_id": 1,
+      "queue_length": "Short",
+      "door_policy": "Standard",
+      "vibe": "",
+      "timestamp": "2025-11-22T16:36:04.438Z"
+    },
+    {
+      "id": 4,
+      "venue_id": "berghain",
+      "user_id": 1,
+      "queue_length": "Long",
+      "door_policy": "Standard",
+      "vibe": "",
+      "timestamp": "2025-11-25T13:37:30.276Z"
+    },
+    {
+      "id": 5,
+      "venue_id": "berghain",
+      "user_id": 1,
+      "queue_length": "Full",
+      "door_policy": "Very Strict",
+      "vibe": [
+        "🔥",
+        "💃",
+        "🎵"
+      ],
+      "timestamp": "2025-11-25T13:49:41.628Z"
+    },
+    {
+      "id": "6e8c19cd-db54-4dc8-9ef1-be02b28945b2",
+      "venue_id": "tresor",
+      "user_id": 1,
+      "queue_status": null,
+      "door_policy": null,
+      "capacity": null,
+      "vibe_emojis": [
+        "🔥",
+        "🎵"
+      ],
+      "vibe_text": "",
+      "photo_url": null,
+      "created_at": "2025-11-25T13:58:27.347Z",
+      "lat": 52.52,
+      "lng": 13.405
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+.profile-container {
+    padding: 24px;
+    height: 100%;
+    overflow-y: auto;
+    color: white;
+    padding-bottom: 80px;
+    /* Space for bottom nav */
+}
+
+/* Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), #2a9d8f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profile-email {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.favorite-venue-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background: rgba(57, 255, 20, 0.1);
+    border-radius: 12px;
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 600;
+    border: 1px solid rgba(57, 255, 20, 0.2);
+}
+
+.edit-profile-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.edit-profile-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+}
+
+.stat-subtext {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.reputation-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.badge-bronze {
+    background: linear-gradient(135deg, #cd7f32, #a05a2c);
+    color: white;
+}
+
+.badge-silver {
+    background: linear-gradient(135deg, #c0c0c0, #909090);
+    color: black;
+}
+
+.badge-gold {
+    background: linear-gradient(135deg, #ffd700, #d4af37);
+    color: black;
+}
+
+.badge-platinum {
+    background: linear-gradient(135deg, #e5e4e2, #b0b0b0);
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Recent Activity */
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.activity-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.activity-details {
+    flex: 1;
+}
+
+.activity-venue {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.activity-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    gap: 8px;
+}
+
+/* Achievements */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.achievement-badge {
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    opacity: 0.5;
+    filter: grayscale(1);
+    transition: all 0.3s;
+}
+
+.achievement-badge.unlocked {
+    opacity: 1;
+    filter: grayscale(0);
+    background: rgba(57, 255, 20, 0.1);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.achievement-icon {
+    font-size: 20px;
+}
+
+.achievement-label {
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Actions */
+.primary-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.action-btn {
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.1s;
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: black;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-item {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    font-size: 15px;
+    text-align: left;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item.logout {
+    color: #ff4d4d;
+    margin-top: 16px;
+    justify-content: center;
+    background: rgba(255, 77, 77, 0.1);
+    border-radius: 12px;
+}

@@ -1,0 +1,35 @@
+.fab-button {
+    position: fixed;
+    bottom: max(90px, calc(var(--sab) + 80px));
+    /* Above bottom nav + safe area */
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 900;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+.fab-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 255, 255, 0.5);
+}
+
+.fab-button:active {
+    transform: scale(0.95);
+}
+
+/* Adjust position for desktop if needed, though mobile-first is priority */
+@media (min-width: 768px) {
+    .fab-button {
+        bottom: 40px;
+        right: 40px;
+    }
+}

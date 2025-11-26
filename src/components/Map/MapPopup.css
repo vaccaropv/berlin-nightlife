@@ -1,0 +1,110 @@
+/* Custom Leaflet Popup Styles - Scoped to .custom-popup */
+.custom-popup .leaflet-popup-content-wrapper {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.custom-popup .leaflet-popup-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    line-height: normal !important;
+}
+
+.custom-popup .leaflet-popup-tip-container {
+    display: none !important;
+}
+
+.compact-popup {
+    background: rgba(10, 10, 10, 0.95);
+    /* Darker, more opaque */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    /* Smaller radius */
+    padding: 8px 10px;
+    /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* Reduced gap */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    min-width: 120px;
+    /* Reduced min-width */
+    animation: fadeIn 0.2s ease-out;
+}
+
+.compact-popup h3 {
+    margin: 0;
+    font-size: 12px;
+    /* Smaller font */
+    font-weight: 700;
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2px;
+}
+
+.popup-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    /* Smaller font */
+    line-height: 1.2;
+}
+
+.popup-label {
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.popup-value {
+    font-weight: 700;
+}
+
+.popup-value.open {
+    color: var(--primary);
+}
+
+.popup-value.closed {
+    color: var(--secondary);
+}
+
+/* Status Colors */
+.status-green {
+    color: #2bb812;
+}
+
+.status-yellow {
+    color: #ffeb3b;
+}
+
+.status-orange {
+    color: #ff9800;
+}
+
+.status-red {
+    color: var(--secondary);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
