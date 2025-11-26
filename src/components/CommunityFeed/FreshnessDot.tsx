@@ -5,7 +5,7 @@ interface FreshnessDotProps {
     timestamp: string;
 }
 
-export default function FreshnessDot({ freshness, timestamp }: FreshnessDotProps) {
+export default function FreshnessDot({ freshness, timestamp: _timestamp }: FreshnessDotProps) {
     const getLabel = () => {
         switch (freshness) {
             case 'fresh':

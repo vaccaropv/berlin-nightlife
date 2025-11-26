@@ -3,7 +3,7 @@ import { Filter, TrendingUp, MapPin, Clock, RefreshCw, AlertCircle } from 'lucid
 import { UnifiedFeedItem, FeedFilter, FeedSort, VoteState } from '../../lib/communityFeed/types';
 import { getUnifiedFeed, subscribeToFeed } from '../../lib/communityFeed/feedApi';
 import { voteReport, getUserVotes, flagReport } from '../../lib/communityFeed/votingApi';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import ReportCard from './ReportCard';
 import NewsCard from './NewsCard';
 import './UnifiedFeed.css';
@@ -37,7 +37,7 @@ export default function UnifiedFeed({ userLocation, onVenueClick }: UnifiedFeedP
     // Load user votes
     useEffect(() => {
         if (user) {
-            getUserVotes(user.id).then(setUserVotes);
+            getUserVotes(user.userId).then(setUserVotes);
         }
     }, [user]);
 
@@ -154,7 +154,7 @@ export default function UnifiedFeed({ userLocation, onVenueClick }: UnifiedFeedP
         }));
 
         try {
-            await voteReport(reportId, user.id, voteType);
+            await voteReport(reportId, user.userId, voteType);
 
             // Update user votes
             setUserVotes(prev => {
@@ -206,7 +206,7 @@ export default function UnifiedFeed({ userLocation, onVenueClick }: UnifiedFeedP
         const flagReason = reasonMap[reason] || 'other';
 
         try {
-            await flagReport(reportId, user.id, flagReason);
+            await flagReport(reportId, user.userId, flagReason);
             alert('Report flagged. Thank you for helping keep the community safe.');
         } catch (err: any) {
             alert(err.message || 'Failed to flag report');

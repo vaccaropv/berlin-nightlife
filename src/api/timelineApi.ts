@@ -1,5 +1,5 @@
 import { TimelineItem } from '../data/mockData';
-import { getReports, subscribeToReports, type StatusReport } from './communityApi';
+import { getReports, subscribeToReports } from './communityApi';
 import { MOCK_VENUES, MOCK_NEWS } from '../data/mockData';
 
 /**

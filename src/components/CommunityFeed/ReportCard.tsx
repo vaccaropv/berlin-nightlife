@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Users, Clock, MapPin, ThumbsUp, ThumbsDown, Flag, Share2, Music } from 'lucide-react';
+import { Users, Clock, MapPin, ThumbsUp, ThumbsDown, Flag, Share2 } from 'lucide-react';
 import { EnhancedReport } from '../../lib/communityFeed/types';
 import { MOCK_VENUES } from '../../data/mockData';
 import FreshnessDot from './FreshnessDot';

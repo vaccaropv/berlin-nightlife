@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { SisyphosEvent, TimetableEntry } from '../../data/sisyphosData';
-import { Clock, ChevronRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 interface TimetableProps {
     event: SisyphosEvent;
